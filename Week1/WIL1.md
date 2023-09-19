@@ -180,3 +180,5 @@ var $function_name = new $name($parameter); // 생성자를 통한 객체의 생
 `window.prompt`: 사용자의 문자열 입력을 받는 대화상자를 표시.
 
 `window.confirm`: [확인], [취소] 버튼이 있는 대화 상자를 표시.
+
+# 7장: 제어 구문
