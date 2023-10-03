@@ -27,7 +27,7 @@ const renderTodoItem = () => {
             const deleteButton = document.createElement("button");
             deleteButton.className = "delete-button";
             deleteButton.addEventListener("click", removeItem);
-            deleteButton.innerText = "🧹";
+            deleteButton.innerText = "❌";
 
             item.appendChild(itemText);
             item.appendChild(deleteButton);
@@ -76,7 +76,7 @@ const toggleItem = (e) => {
 const removeItem = (e) => {
     const filteredList = itemList.filter(
         (inputObject) => 
-            inputObject.text !== e.target.parentNode.innerText.slice(0, -2)
+            inputObject.text !== e.target.parentNode.innerText.slice(0, -1)
     );
     localStorage.setItem("itemList", JSON.stringify(filteredList)); // 로컬 스토리지 갱신
     renderTodoItem();
