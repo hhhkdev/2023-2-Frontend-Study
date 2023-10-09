@@ -41,7 +41,87 @@ body {
 .row-wrapper {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button {
+    border: 0;
+    background: white;
+
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button.operator {
+    background: #ff9f0a;
+}
+
+button.number {
+    background: #333333;
+}
+
+button.zero {
+    width: 268px;
+    border-radius: 40px;
+}
+
+button.reset-operator {
+    color: #000;
+    background: #a5a5a5;
+    width: 268px;
+    border-radius: 40px;
+}
+
+#input-from {
+    display: flex;
     align-items: center;
-    gap: 14px;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.input-text {
+    box-sizing: border-box;
+
+    width: 100%;
+    margin: 176px 0px 22px 0px;
+    text-align: right;
+
+    font-size: 72px;
+    color: #fff;
+
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.input-text::placeholder {
+    color: #fff;
+}
+
+/* input 기본 스타일 초기화 */
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* IE10 이상에서 input box에 추가된 지우기 버튼 제거 */
+input::-ms-clear {
+    display: none;
+}
+
+/* input type number에서 화살표 제거 */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
