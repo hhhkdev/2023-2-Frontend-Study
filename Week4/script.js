@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const updateDisplay = () => {
         inputText.value = currentNumber;
-    };
-
+    }; 
+ 
     const clearData = () => {
         currentNumber = '';
         previousNumber = '';
