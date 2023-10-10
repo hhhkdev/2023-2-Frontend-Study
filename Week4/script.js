@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         currentNumber = '';
         previousNumber = '';
         currentOperator = '';
-        acButton.inputText = 'AC';
+        acButton.innerText = 'AC';
     };
 
     const operate = () => {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document
         .querySelector('.button-wrapper')
         .addEventListener('click', function (e) {
-            const buttonValue = e.target.inputText;
+            const buttonValue = e.target.innerText;
 
             acButton.innerText = 'C'
 
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (currentOperator && currentNumber && previousNumber) {
                     operate();
                     updateDisplay();
-                    previousNumber =currentNumber;
+                    previousNumber = currentNumber;
                     currentNumber = '';
                 } else if (!previousNumber) {
                     previousNumber = currentNumber;
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     currentOperator = buttonValue;
                     currentNumber = buttonValue;
                     updateDisplay();
-                    previousNumber = '';
+                    operatorJustClicked = true;
                 } else if (buttonValue === '.') {
                     if (!currentNumber.includes('.')) {
                         currentNumber += '.';
